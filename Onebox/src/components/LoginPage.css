@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Root page styles for dark and light mode */
+.login-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Dark and light mode color variables */
+.login-page.dark {
+  --background-color: #121212;
+  --box-background-color: #1e1e1e;
+  --text-color: #fff;
+  --input-bg: #333;
+  --button-bg: #007bff;
+  --button-hover-bg: #0056b3;
+}
+
+.login-page.light {
+  --background-color: #f7f7f7;
+  --box-background-color: #fff;
+  --text-color: #000;
+  --input-bg: #ddd;
+  --button-bg: #007bff;
+  --button-hover-bg: #0056b3;
+}
+
+/* Header styling with logo and theme toggle button */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center; /* Center the header content horizontally */
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-right: 8px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.theme-toggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: auto; /* Push theme toggle button to the right */
+}
+
+/* Login Box */
+.login-box {
+  background-color: var(--box-background-color);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--text-color);
+  min-width: 350px;
+}
+
+/* Google Button */
+.google-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--input-bg);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 80px; /* Increased margin to create more space */
+  color: var(--text-color);
+}
+
+.google-btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.google-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Create Account Button */
+.create-account-btn {
+  width: 100%;
+  background-color: var(--button-bg);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.create-account-btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Link Styling */
+.login-box a {
+  color: var(--button-bg);
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
